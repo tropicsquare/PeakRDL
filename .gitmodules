@@ -1,0 +1,9 @@
+[submodule "PeakRDL-ipxact"]
+	path = PeakRDL-ipxact
+	url = git@github.com:tropicsquare/PeakRDL-ipxact.git
+[submodule "systemrdl-compiler"]
+	path = systemrdl-compiler
+	url = git@github.com:tropicsquare/systemrdl-compiler.git
+[submodule "PeakRDL-uvm"]
+	path = PeakRDL-uvm
+	url = git@github.com:tropicsquare/PeakRDL-uvm.git

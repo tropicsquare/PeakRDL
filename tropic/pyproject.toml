@@ -1,0 +1,38 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project.scripts]
+peakrdl = "peakrdl.main:main"
+
+[tool.poetry]
+name = "peakrdl"
+
+# Middle 3 numbers corresponds to upstream TAG
+# The suffix "+T.<VERSION>" indicates Tropic Square version 1 forking out of
+# 1.1.0
+# PeakRDL subtools in Tropic Square version are bumped independently via submodules
+version = "1.1.0+T.1"
+
+description = "Tropic Square packaging of PeakRDL"
+
+authors = ["Mike Popolski", "Ondrej Ille (Tropic Square Maintainter)"]
+
+packages = [
+    { include = "peakrdl", from = "../src" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8 <3.11"
+systemrdl-compiler = { path = "../systemrdl-compiler/", develop = false }
+peakrdl-html = { path = "../PeakRDL-html/", develop = false }
+peakrdl-ipxact = { path = "../PeakRDL-ipxact/", develop = false }
+peakrdl-regblock = { path = "../PeakRDL-regblock/", develop = false }
+peakrdl-systemrdl = { path = "../PeakRDL-systemrdl/", develop = false }
+peakrdl-uvm = { path = "../PeakRDL-uvm/", develop = false }
+peakrdl-cheader = { path = "../PeakRDL-cheader/", develop = false }
+tomli = "^2.1.0"
+
+
+[tool.poetry.scripts]
+peakrdl = 'peakrdl.main:main'
